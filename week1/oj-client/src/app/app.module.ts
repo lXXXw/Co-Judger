@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { routing } from './app.routes';
+
 import { AppComponent } from './app.component';
 import { ProblemListComponent } from './components/problem-list/problem-list.component';
 import { ProblemDetailComponent } from './components/problem-detail/problem-detail.component';
 
-import { DataService } from "./service/data.service";
+import { DataService } from './service/data.service';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,12 @@ import { DataService } from "./service/data.service";
     ProblemDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [
       {
-          provide: "data",
+          provide: 'data',
           useClass: DataService
       }
   ],

@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Problem } from "../../models/problem.model"
+import { Problem } from '../../models/problem.model';
 
 @Component({
   selector: 'app-problem-list',
@@ -9,7 +9,7 @@ import { Problem } from "../../models/problem.model"
 
 export class ProblemListComponent implements OnInit {
   problems: Problem[];
-  constructor(@Inject("data") private data) { }
+  constructor(@Inject('data') private data) { }
 
   ngOnInit() {
       this.getProblems();

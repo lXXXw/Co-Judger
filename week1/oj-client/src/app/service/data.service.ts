@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Problem } from "../models/problem.model";
-import { PROBLEMS } from "../mock-problems";
+import { Problem } from '../models/problem.model';
+import { PROBLEMS } from '../mock-problems';
 @Injectable()
 export class DataService {
 
@@ -10,7 +10,7 @@ export class DataService {
       return PROBLEMS;
   }
 
-  getProblem(id: number) : Problem {
+  getProblem(id: number): Problem {
       return PROBLEMS.find((problem) => problem.id === id);
   }
 
